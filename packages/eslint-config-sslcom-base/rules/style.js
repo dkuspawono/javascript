@@ -105,6 +105,10 @@ module.exports = {
     // http://eslint.org/docs/rules/max-statements-per-line
     'max-statements-per-line': [0, { max: 1 }],
 
+    // require/ignore ternaries to be separated by new lines
+    // http://eslint.org/docs/rules/multiline-ternary
+    'multiline-ternary': 0,
+
     // require a capital letter for constructors
     'new-cap': [2, { newIsCap: true }],
 
