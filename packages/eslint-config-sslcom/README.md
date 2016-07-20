@@ -10,7 +10,7 @@ We export three ESLint configurations for your usage.
 
 Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, and `eslint-plugin-react`.
 
-1. `npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint`
+1. `npm install --save-dev eslint-config-sslcom eslint-plugin-import eslint-plugin-react eslint`
 2. add `"extends": "sslcom"` to your .eslintrc
 
 ### eslint-config-sslcom/base
