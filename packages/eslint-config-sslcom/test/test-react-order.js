@@ -2,7 +2,6 @@ import test from 'tape';
 import { CLIEngine } from 'eslint';
 import eslintrc from '../';
 import reactRules from '../rules/react';
-import reactA11yRules from '../rules/react-a11y';
 
 const cli = new CLIEngine({
   useEslintrc: false,
@@ -36,9 +35,8 @@ ${body}
 
 test('validate react prop order', (t) => {
   t.test('make sure our eslintrc has React and JSX linting dependencies', (t) => {
-    t.plan(2);
+    t.plan(1);
     t.deepEqual(reactRules.plugins, ['react']);
-    t.deepEqual(reactA11yRules.plugins, ['jsx-a11y', 'react']);
   });
 
   t.test('passes a good component', (t) => {
