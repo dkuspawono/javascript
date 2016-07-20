@@ -38,6 +38,11 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
     'react/jsx-curly-spacing': [2, 'never', { allowMultiline: true }],
 
+    // Restrict file extensions that may contain JSX (jsx-filename-extension)
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+    // TODO: This is disabled for now, need to submit an issue
+    'react/jsx-filename-extension': 0,
+
     // Enforce event handler naming conventions in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
     'react/jsx-handler-names': [0, {
@@ -109,6 +114,11 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
     'react/jsx-uses-vars': 2,
 
+    // Prevent comments from being inserted as text nodes (no-comment-textnodes)
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-comment-textnodes.md
+
+    'react/no-comment-textnodes': 2,
+
     // Prevent usage of dangerous JSX properties
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
     'react/no-danger': 0,
@@ -136,6 +146,10 @@ module.exports = {
     // Prevent multiple component definition per file
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
     'react/no-multi-comp': [2, { ignoreStateless: true }],
+
+    // Prevent usage of the return value of React.render (no-render-return-value)
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
+    'react/no-render-return-value': 2,
 
     // Prevent usage of setState
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
@@ -168,6 +182,11 @@ module.exports = {
     // Restrict file extensions that may be required
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md
     'react/require-extension': [0, { extensions: ['.jsx'] }],
+
+    // Enforce React components to have a shouldComponentUpdate method
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-optimization.md
+
+    'react/require-optimization': 2,
 
     // Require render() methods to return something
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
