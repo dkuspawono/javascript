@@ -151,7 +151,7 @@ module.exports = {
     'no-octal': 2,
 
     // disallow use of octal escape sequences in string literals, such as
-    // var foo = 'Copyright \251';
+    // var foo = 'Copyright \251'
     'no-octal-escape': 2,
 
     // disallow reassignment of function parameters
@@ -230,4 +230,4 @@ module.exports = {
     // require or disallow Yoda conditions
     yoda: 2
   }
-};
+}

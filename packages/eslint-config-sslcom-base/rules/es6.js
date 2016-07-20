@@ -126,6 +126,8 @@ module.exports = {
     // http://eslint.org/docs/rules/rest-spread-spacing
     'rest-spread-spacing': [2, 'never'],
 
+    semi: [2, 'never'],
+
     // import sorting
     // http://eslint.org/docs/rules/sort-imports
     'sort-imports': 0,
@@ -138,4 +140,4 @@ module.exports = {
     // http://eslint.org/docs/rules/yield-star-spacing
     'yield-star-spacing': [2, 'after']
   }
-};
+}

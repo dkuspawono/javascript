@@ -129,4 +129,4 @@ module.exports = {
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
     'import/no-restricted-paths': 0,
   },
-};
+}

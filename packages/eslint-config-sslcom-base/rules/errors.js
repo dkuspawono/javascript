@@ -101,4 +101,4 @@ module.exports = {
     // ensure that the results of typeof are compared against a valid string
     'valid-typeof': 2
   }
-};
+}
