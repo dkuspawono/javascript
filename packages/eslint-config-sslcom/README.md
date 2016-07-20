@@ -10,7 +10,7 @@ We export three ESLint configurations for your usage.
 
 Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, and `eslint-plugin-react`.
 
-1. `PKG=eslint-config-sslcom npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG"` (which produces and runs a command like `npm install --save-dev eslint-config-sslcom eslint@^2.9.0 eslint-plugin-import@^1.7.0 eslint-plugin-react@^5.0.1` but with whatever the proper version numbers are)
+1. `npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint`
 2. add `"extends": "sslcom"` to your .eslintrc
 
 ### eslint-config-sslcom/base
