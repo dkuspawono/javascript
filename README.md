@@ -1,16 +1,12 @@
-# Airbnb JavaScript Style Guide() {
+# SSL.com JavaScript Style Guide() {
 
-*A mostly reasonable approach to JavaScript*
-
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/airbnb/javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+*A mostly reasonable approach to JavaScript, derived from Airbnb/javascript and made more reasonable*
 
 Other Style Guides
  - [ES5](es5/)
  - [React](react/)
- - [CSS & Sass](https://github.com/airbnb/css)
- - [Ruby](https://github.com/airbnb/ruby)
+ - [CSS & Sass](https://github.com/sslcom/css)
+ - [Ruby](https://github.com/sslcom/ruby)
 
 ## Table of Contents
 
@@ -154,7 +150,7 @@ Other Style Guides
     ```
 
   <a name="objects--reserved-words"></a><a name="3.2"></a>
-  - [3.2](#objects--reserved-words) If your code will be executed in browsers in script context, don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/airbnb/javascript/issues/61). It’s OK to use them in ES6 modules and server-side code. jscs: [`disallowIdentifierNames`](http://jscs.info/rule/disallowIdentifierNames)
+  - [3.2](#objects--reserved-words) If your code will be executed in browsers in script context, don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/sslcom/javascript/issues/61). It’s OK to use them in ES6 modules and server-side code. jscs: [`disallowIdentifierNames`](http://jscs.info/rule/disallowIdentifierNames)
 
     ```javascript
     // bad
@@ -520,7 +516,7 @@ Other Style Guides
   - [6.2](#strings--line-length) Strings that cause the line to go over 100 characters should be written across multiple lines using string concatenation.
 
   <a name="strings--concat-perf"></a><a name="6.3"></a>
-  - [6.3](#strings--concat-perf) Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
+  - [6.3](#strings--concat-perf) Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/sslcom/javascript/issues/40).
 
     ```javascript
     // bad
@@ -1102,15 +1098,15 @@ Other Style Guides
 
     ```javascript
     // bad
-    const AirbnbStyleGuide = require('./AirbnbStyleGuide');
-    module.exports = AirbnbStyleGuide.es6;
+    const SslcomStyleGuide = require('./SslcomStyleGuide');
+    module.exports = SslcomStyleGuide.es6;
 
     // ok
-    import AirbnbStyleGuide from './AirbnbStyleGuide';
-    export default AirbnbStyleGuide.es6;
+    import SslcomStyleGuide from './SslcomStyleGuide';
+    export default SslcomStyleGuide.es6;
 
     // best
-    import { es6 } from './AirbnbStyleGuide';
+    import { es6 } from './SslcomStyleGuide';
     export default es6;
     ```
 
@@ -1121,10 +1117,10 @@ Other Style Guides
 
     ```javascript
     // bad
-    import * as AirbnbStyleGuide from './AirbnbStyleGuide';
+    import * as SslcomStyleGuide from './SslcomStyleGuide';
 
     // good
-    import AirbnbStyleGuide from './AirbnbStyleGuide';
+    import SslcomStyleGuide from './SslcomStyleGuide';
     ```
 
   <a name="modules--no-export-from-import"></a><a name="10.3"></a>
@@ -1135,11 +1131,11 @@ Other Style Guides
     ```javascript
     // bad
     // filename es6.js
-    export { es6 as default } from './airbnbStyleGuide';
+    export { es6 as default } from './sslcomStyleGuide';
 
     // good
     // filename es6.js
-    import { es6 } from './AirbnbStyleGuide';
+    import { es6 } from './SslcomStyleGuide';
     export default es6;
     ```
 
@@ -2140,7 +2136,7 @@ Other Style Guides
     const foo = 'Whatever national crop flips the window. The cartoon reverts within the screw. Whatever wizard constrains a helpful ally. The counterpart ascends!';
 
     // bad
-    $.ajax({ method: 'POST', url: 'https://airbnb.com/', data: { name: 'John' } }).done(() => console.log('Congratulations!')).fail(() => console.log('You have failed this city.'));
+    $.ajax({ method: 'POST', url: 'https://sslcom.com/', data: { name: 'John' } }).done(() => console.log('Congratulations!')).fail(() => console.log('You have failed this city.'));
 
     // good
     const foo = 'Whatever national crop flips the window. The cartoon reverts within the screw. ' +
@@ -2149,7 +2145,7 @@ Other Style Guides
     // good
     $.ajax({
       method: 'POST',
-      url: 'https://airbnb.com/',
+      url: 'https://sslcom.com/',
       data: { name: 'John' },
     })
       .done(() => console.log('Congratulations!'))
@@ -2332,7 +2328,7 @@ Other Style Guides
     ```
 
   <a name="coercion--bitwise"></a><a name="21.5"></a>
-  - [21.5](#coercion--bitwise) **Note:** Be careful when using bitshift operations. Numbers are represented as [64-bit values](http://es5.github.io/#x4.3.19), but bitshift operations always return a 32-bit integer ([source](http://es5.github.io/#x11.7)). Bitshift can lead to unexpected behavior for integer values larger than 32 bits. [Discussion](https://github.com/airbnb/javascript/issues/109). Largest signed 32-bit Int is 2,147,483,647:
+  - [21.5](#coercion--bitwise) **Note:** Be careful when using bitshift operations. Numbers are represented as [64-bit values](http://es5.github.io/#x4.3.19), but bitshift operations always return a 32-bit integer ([source](http://es5.github.io/#x11.7)). Bitshift can lead to unexpected behavior for integer values larger than 32 bits. [Discussion](https://github.com/sslcom/javascript/issues/109). Largest signed 32-bit Int is 2,147,483,647:
 
     ```javascript
     2147483647 >> 0 //=> 2147483647
@@ -2508,12 +2504,12 @@ Other Style Guides
   - [22.8](#naming--PascalCase-singleton) Use PascalCase when you export a constructor / class / singleton / function library / bare object.
 
     ```javascript
-    const AirbnbStyleGuide = {
+    const SslcomStyleGuide = {
       es6: {
       }
     };
 
-    export default AirbnbStyleGuide;
+    export default SslcomStyleGuide;
     ```
 
 
@@ -2736,7 +2732,7 @@ Other Style Guides
    - Whichever testing framework you use, you should be writing tests!
    - Strive to write many small pure functions, and minimize where mutations occur.
    - Be cautious about stubs and mocks - they can make your tests more brittle.
-   - We primarily use [`mocha`](https://www.npmjs.com/package/mocha) at Airbnb. [`tape`](https://www.npmjs.com/package/tape) is also used occasionally for small, separate modules.
+   - We primarily use [`mocha`](https://www.npmjs.com/package/mocha) with [`chai`](https://www.npmjs.com/package/chai) at SSL.com.
    - 100% test coverage is a good goal to strive for, even if it's not always practical to reach it.
    - Whenever you fix a bug, _write a regression test_. A bug fixed without a regression test is almost certainly going to break again in the future.
 
@@ -2774,9 +2770,7 @@ Other Style Guides
 **Tools**
 
   - Code Style Linters
-    + [ESlint](http://eslint.org/) - [Airbnb Style .eslintrc](https://github.com/airbnb/javascript/blob/master/linters/.eslintrc)
-    + [JSHint](http://jshint.com/) - [Airbnb Style .jshintrc](https://github.com/airbnb/javascript/blob/master/linters/.jshintrc)
-    + [JSCS](https://github.com/jscs-dev/node-jscs) - [Airbnb Style Preset](https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json)
+    + [ESlint](http://eslint.org/) - [SSL.com Style .eslintrc](https://github.com/sslcom/javascript/blob/master/linters/.eslintrc)
 
 **Other Style Guides**
 
@@ -2787,7 +2781,7 @@ Other Style Guides
 **Other Styles**
 
   - [Naming this in nested functions](https://gist.github.com/cjohansen/4135065) - Christian Johansen
-  - [Conditional Callbacks](https://github.com/airbnb/javascript/issues/52) - Ross Allen
+  - [Conditional Callbacks](https://github.com/sslcom/javascript/issues/52) - Ross Allen
   - [Popular JavaScript Coding Conventions on Github](http://sideeffect.kr/popularconvention/#javascript) - JeongHoon Byun
   - [Multiple var statements in JavaScript, not superfluous](http://benalman.com/news/2012/05/multiple-var-statements-javascript/) - Ben Alman
 
@@ -2847,6 +2841,7 @@ Other Style Guides
   - **Aan Zee**: [AanZee/javascript](https://github.com/AanZee/javascript)
   - **Adult Swim**: [adult-swim/javascript](https://github.com/adult-swim/javascript)
   - **Airbnb**: [airbnb/javascript](https://github.com/airbnb/javascript)
+  - **SSL.com**: [sslcom/javascript](https://github.com/sslcom/javascript)
   - **Apartmint**: [apartmint/javascript](https://github.com/apartmint/javascript)
   - **Ascribe**: [ascribe/javascript](https://github.com/ascribe/javascript)
   - **Avalara**: [avalara/javascript](https://github.com/avalara/javascript)
@@ -2941,22 +2936,22 @@ Other Style Guides
 
 ## The JavaScript Style Guide Guide
 
-  - [Reference](https://github.com/airbnb/javascript/wiki/The-JavaScript-Style-Guide-Guide)
+  - [Reference](https://github.com/sslcom/javascript/wiki/The-JavaScript-Style-Guide-Guide)
 
 ## Chat With Us About JavaScript
 
-  - Find us on [gitter](https://gitter.im/airbnb/javascript).
+  - Find us on [gitter](https://gitter.im/sslcom/javascript).
 
 ## Contributors
 
-  - [View Contributors](https://github.com/airbnb/javascript/graphs/contributors)
+  - [View Contributors](https://github.com/sslcom/javascript/graphs/contributors)
 
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2014-2016 Airbnb
+Copyright (c) 2016 SSL.com
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

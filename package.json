@@ -1,35 +1,39 @@
 {
-  "name": "airbnb-style",
-  "version": "2.0.0",
-  "description": "A mostly reasonable approach to JavaScript.",
+  "name": "sslcom-style",
+  "version": "1.0.0",
+  "description": "The official SSL.com JavaScript style guide and ESLint config",
   "scripts": {
     "preinstall": "npm run install:config && npm run install:config:base",
-    "install:config": "cd packages/eslint-config-airbnb && npm prune && npm install",
-    "install:config:base": "cd packages/eslint-config-airbnb-base && npm prune && npm install",
+    "install:config": "cd packages/eslint-config-sslcom && npm prune && npm install",
+    "install:config:base": "cd packages/eslint-config-sslcom-base && npm prune && npm install",
     "test": "npm run --silent test:config && npm run --silent test:config:base",
-    "test:config": "cd packages/eslint-config-airbnb; npm test",
-    "test:config:base": "cd packages/eslint-config-airbnb-base; npm test",
+    "test:config": "cd packages/eslint-config-sslcom; npm test",
+    "test:config:base": "cd packages/eslint-config-sslcom-base; npm test",
     "travis": "npm run --silent travis:config && npm run --silent travis:config:base",
-    "travis:config": "cd packages/eslint-config-airbnb; npm run travis",
-    "travis:config:base": "cd packages/eslint-config-airbnb-base; npm run travis"
+    "travis:config": "cd packages/eslint-config-sslcom; npm run travis",
+    "travis:config:base": "cd packages/eslint-config-sslcom-base; npm run travis"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/airbnb/javascript.git"
+    "url": "https://github.com/sslcom/javascript.git"
   },
   "keywords": [
     "style guide",
     "lint",
-    "airbnb",
+    "sslcom",
     "es6",
     "es2015",
     "react",
     "jsx"
   ],
-  "author": "Harrison Shoff <hi@hshoff.com> (https://twitter.com/hshoff)",
+  "authors": "Aaron Dancer <me@aarondancer.com> (https://twitter.com/aaron7pm)",
+  "contributors": [{
+    "name": "Harrison Shoff",
+    "website": "https://twitter.com/hshoff"
+  }],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airbnb/javascript/issues"
+    "url": "https://github.com/sslcom/javascript/issues"
   },
-  "homepage": "https://github.com/airbnb/javascript"
+  "homepage": "https://github.com/sslcom/javascript"
 }
