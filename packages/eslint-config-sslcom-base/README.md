@@ -17,7 +17,7 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+. It
 
 Lints ES5 and below. Requires `eslint` and `eslint-plugin-import`.
 
-1. `npm install --save-dev eslint-config-airbnb-base eslint-plugin-import eslint`
+1. `npm install --save-dev eslint-config-sslcom-base eslint-plugin-import eslint`
 2. add `"extends": "sslcom-base/legacy"` to your .eslintrc
 
 See [SSL.com's overarching ESLint config](https://npmjs.com/eslint-config-sslcom), [SSL.com's Javascript styleguide](https://github.com/sslcom/javascript), and the [ESlint config docs](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
