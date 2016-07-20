@@ -10,7 +10,7 @@ We export two ESLint configurations for your usage.
 
 Our default export contains all of our ESLint rules, including ECMAScript 6+. It requires `eslint` and `eslint-plugin-import`.
 
-1. `npm install --save-dev eslint-config-airbnb-base eslint-plugin-import eslint`
+1. `npm install --save-dev eslint-config-sslcom-base eslint-plugin-import eslint`
 2. add `"extends": "sslcom-base"` to your .eslintrc
 
 ### eslint-config-sslcom-base/legacy
