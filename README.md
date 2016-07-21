@@ -2636,18 +2636,38 @@ Other Style Guides
 
 ## jQuery
 
-  <a name="jquery--dollar-prefix"></a><a name="25.1"></a>
-  - [25.1](#jquery--dollar-prefix) Prefix jQuery object variables with a `$`.
+  <a name="jquery--avoid"></a><a name="25.0"></a>
+  - [25.0](#jquery--avoid) It's a good idea to completely avoid using jQuery. Please don't use it.
+    - [You Don't Need jQuery](https://github.com/oneuijs/You-Dont-Need-jQuery)
+    - jQuery is very large
+    - jQuery is hard to test
+    - jQuery promotes DOM-centric programming, even for computation. This is extremely slow.
+    - jQuery does not comply with many ECMAScript standards, Ex: [Promises don't follow the standard](https://thewayofcode.wordpress.com/2013/01/22/javascript-promises-and-why-jquery-implementation-is-broken/). This can lead to broken and unpredictable code.
+    - jQuery is _really_ slow compared to other libraries and vanillajs
+
+  <a name="jquery--compat"></a><a name="25.1"></a>
+  - [25.1](#jquery--compat) Use the `jQuery` function instead of the shorthand `$` for compatability.
 
     ```javascript
     // bad
-    const sidebar = $('.sidebar');
-
-    // good
     const $sidebar = $('.sidebar');
 
     // good
-    const $sidebarBtn = $('.sidebar-btn');
+    const $sidebar = jQuery('.sidebar');
+    ```
+
+  <a name="jquery--dollar-prefix"></a><a name="25.2"></a>
+  - [25.2](#jquery--dollar-prefix) Prefix jQuery object variables with a `$`.
+
+    ```javascript
+    // bad
+    const sidebar = jQuery('.sidebar');
+
+    // good
+    const $sidebar = jQuery('.sidebar');
+
+    // good
+    const $sidebarBtn = jQuery('.sidebar-btn');
     ```
 
   <a name="jquery--cache"></a><a name="25.2"></a>
@@ -2656,18 +2676,18 @@ Other Style Guides
     ```javascript
     // bad
     function setSidebar() {
-      $('.sidebar').hide();
+      jQuery('.sidebar').hide();
 
       // ...stuff...
 
-      $('.sidebar').css({
+      jQuery('.sidebar').css({
         'background-color': 'pink'
       });
     }
 
     // good
     function setSidebar() {
-      const $sidebar = $('.sidebar');
+      const $sidebar = jQuery('.sidebar');
       $sidebar.hide();
 
       // ...stuff...
@@ -2679,23 +2699,23 @@ Other Style Guides
     ```
 
   <a name="jquery--queries"></a><a name="25.3"></a>
-  - [25.3](#jquery--queries) For DOM queries use Cascading `$('.sidebar ul')` or parent > child `$('.sidebar > ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
+  - [25.3](#jquery--queries) For DOM queries use Cascading `jQuery('.sidebar ul')` or parent > child `jQuery('.sidebar > ul')`. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
 
   <a name="jquery--find"></a><a name="25.4"></a>
   - [25.4](#jquery--find) Use `find` with scoped jQuery object queries.
 
     ```javascript
     // bad
-    $('ul', '.sidebar').hide();
+    jQuery('ul', '.sidebar').hide();
 
     // bad
-    $('.sidebar').find('ul').hide();
+    jQuery('.sidebar').find('ul').hide();
 
     // good
-    $('.sidebar ul').hide();
+    jQuery('.sidebar ul').hide();
 
     // good
-    $('.sidebar > ul').hide();
+    jQuery('.sidebar > ul').hide();
 
     // good
     $sidebar.find('ul').hide();
